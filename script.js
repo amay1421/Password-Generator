@@ -36,6 +36,8 @@ function generatePassword() {
   var upperCaseSet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S',
   'T','U','V','W','X','Y','Z',];
 
+  var numberSet = ['1','2','3','4','5','6','7','8','9'];
+
   var finalSet = [];
 
   // build the finalSet based on user input
@@ -46,8 +48,12 @@ function generatePassword() {
   }
 
   if(includeUppercase) {
-    // include lowercase!
+    // include uppercase!
     finalSet = finalSet.concat(upperCaseSet);
+  }
+  if(includeNumber) {
+    // include numbers!
+    finalSet = finalSet.concat(numberSet);
   }
 
   if(finalSet.length == 0) {
