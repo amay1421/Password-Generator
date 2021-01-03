@@ -23,10 +23,10 @@ function generatePassword() {
 
   // ask which to include
 
-  var includeLowercase = confirm("Do you want lowercase?");
-  var includeUppercase = confirm("Do you want uppercase?");
-  //var includeNumber= confirm("Do you want number?");
-  //var includeSpecial = confirm("Do you want special?");
+  var includeLowercase = confirm("Do you want lowercase characters?");
+  var includeUppercase = confirm("Do you want uppercase characters?");
+  var includeNumber= confirm("Do you want number characters?");
+  var includeSpecial = confirm("Do you want special characters?");
 
   // create character pool/sets
 
@@ -37,6 +37,9 @@ function generatePassword() {
   'T','U','V','W','X','Y','Z',];
 
   var numberSet = ['1','2','3','4','5','6','7','8','9'];
+
+  var specialSet = ['!','"','#','$','%','&','(',')','*','+','-','.','/',':','<','=','>',
+'?','@','[',']','^','_','{','|','}','`','~',];
 
   var finalSet = [];
 
@@ -54,6 +57,10 @@ function generatePassword() {
   if(includeNumber) {
     // include numbers!
     finalSet = finalSet.concat(numberSet);
+  }
+  if(includeSpecial) {
+    // include special characters!
+    finalSet = finalSet.concat(specialSet);
   }
 
   if(finalSet.length == 0) {
