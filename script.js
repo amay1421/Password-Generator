@@ -15,17 +15,17 @@ function generatePassword() {
   var myPassword = '';
 
   // ask the user how many characters
-  var characterLength = prompt("How many characters?");
+  var characterLength = prompt("How many characters would you like your password to be?");
 
   while(characterLength < 8 || characterLength > 128 ) {
-    characterLength = prompt("Must be atleast 8, and not over 128. Please enter a valid value:");
+    characterLength = prompt("Your password must be at least 8 characters, and not over 128 characters. Please enter a valid value:");
   }
 
   // ask which to include
 
   var includeLowercase = confirm("Do you want lowercase characters?");
   var includeUppercase = confirm("Do you want uppercase characters?");
-  var includeNumber= confirm("Do you want number characters?");
+  var includeNumber= confirm("Do you want your password to include numbers?");
   var includeSpecial = confirm("Do you want special characters?");
 
   // create character pool/sets
