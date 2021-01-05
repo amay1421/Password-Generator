@@ -16,7 +16,7 @@ function generatePassword() {
   var characterLength = prompt("How many characters would you like your password to be?");
 
   while(characterLength < 8 || characterLength > 128 || (isNaN(+characterLength))) {
-    characterLength = prompt("Your password must be at least 8 characters, and not over 128 characters. Please enter a valid value:");
+    characterLength = prompt("Your password must be at least 8 characters, and not over 128 characters. Please enter a valid numerical value:");
   }
 
   // ask which to include
